@@ -1,0 +1,67 @@
+.form-cell {
+  padding: 20px;
+
+}
+.add-image{
+  width: 128rpx; height: 128rpx; display: inline-block; box-sizing: border-box
+}
+.file-info {
+  display: flex;
+  flex-direction: column;
+}
+.form-cell_title{
+margin-top: 5rpx;
+width: 100%;
+display: inline-block;
+content: ''; 
+}
+.file-info_name {
+  font-size: 17px;
+}
+
+.file-info_size {
+  font-size: 17px;
+  color: #8D8D8D;
+}
+
+.delete {
+  width: 22px;
+  height: 22px;
+  margin-left: auto;
+}
+
+.download {
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
+.title1{
+  width: 590rpx; height: 145rpx; display: block; box-sizing: border-box
+}
+.title2{
+  font-size: larger; position: relative; width: 166rpx;  height: 52rpx; left: 240rpx; top: -104rpx
+}
+.img1{
+  width: 590rpx; height: 412rpx; display: inline-block; box-sizing: border-box; margin-top: 5rpx
+}
+.text1{
+  width: 590rpx; height: 364rpx; display: inline-block; box-sizing: border-box
+}
+.text2{
+  width: 590rpx; height: 262rpx; display: inline-block; box-sizing: border-box
+}
+.text3{
+  width: 614rpx; height: 156rpx; display: inline-block; box-sizing: border-box
+}
+.text4{
+  width: 590rpx; height: 74rpx; display: inline-block; box-sizing: border-box
+}
+.text5{
+  width: 614rpx; height: 122rpx; display: inline-block; box-sizing: border-box
+}
+.text6{
+  width: 614rpx; height: 100rpx; display: inline-block; box-sizing: border-box
+}
+.text7{
+  width: 566rpx; height: 122rpx; display: inline-block; box-sizing: border-box
+}

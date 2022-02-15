@@ -1,0 +1,256 @@
+<wxs module="util" src="../util.wxs" />
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="form-cell_title">姓名</view>
+      <input class="form-cell_input" placeholder="请输入您的姓名" placeholder-class="form-cell_title-placeholder" bindinput="onNameInput" value="{{name}}" />
+      <view class="age">
+        <view class="form-cell_title">年龄</view>
+        <input class="form-cell_input" placeholder="请输入您的年龄" placeholder-class="form-cell_title-placeholder" bindinput="onAgeInput" value="{{age}}" />
+      </view>
+    </view>
+    <view class="form-cell">
+      <view class="sexleft">
+        <view class="form-cell_title">姓别</view>
+        <radio-group bindchange="radioChange"  name="sex">
+          <view>
+            <radio class="select" value="男" style="width: 113rpx; height: 52rpx; display: inline-block; box-sizing: border-box">男 </radio>
+            <radio class="select" value="女">女</radio>
+          </view>
+		    </radio-group>
+      </view>
+      <view class="age">
+        <view class="form-cell_title">记录日期</view>
+        <input class="form-cell_input" placeholder="示例：“20220201”" placeholder-class="form-cell_title-placeholder" bindinput="onDateInput" value="{{date}}" />
+      </view>
+    </view>
+    <view class="form-cell" style="width: 670rpx; height: 192rpx; display: block; box-sizing: border-box">
+      <view class="form-cell_title desc">病情描述</view>
+      <input class="form-cell_input desc" placeholder="请输入您的病情简介" placeholder-class="form-cell_title-placeholder" bindinput="onDescInput" value="{{desc}}" />
+      <view class="img_desc">
+        <image class="add-image" src="../../images/icon/wode.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell inline">
+      <view>头部皮损所占面积</view>
+      <picker class="option" bindchange="onChooseFreq" range="{{freqOptions}}">
+        {{freqOptions[freq]}}
+      </picker>
+      <picker class="selector" bindchange="onChooseFreq" range="{{freqOptions}}">
+        <image class="selector" src="../../images/add/next.png" />
+      </picker>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 103rpx; ">红斑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider1">
+        <slider bindchange="changeSlider1" value="{{slider1}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 10rpx; height: 78rpx;">
+       {{slider1[sli1]}}
+      </view>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 108rpx;top: 16rpx;">浸润</view>
+      <view >
+        <view class="slider"bindchange="changeSlider2" >
+        <slider bindchange="changeSlider2" value="{{slider2}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 26rpx; height: 164rpx;">
+       {{slider2[sli2]}}
+      </view>
+    </view>
+    <view class="form-cell inline"  style="height: 234rpx">
+      <view class="left-text" style="width: 110rpx;">鳞屑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider3" >
+        <slider bindchange="changeSlider3" value="{{slider3}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 12rpx; height: 194rpx; position: relative; left: 0rpx">
+       {{slider3[sli3]}}
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell inline">
+      <view>上肢皮损所占面积</view>
+      <picker class="option" bindchange="onChooseFreq1" range="{{freqOptions1}}">
+        {{freqOptions1[freq1]}}
+      </picker>
+      <picker class="selector" bindchange="onChooseFreq1" range="{{freqOptions1}}">
+        <image class="selector" src="../../images/add/next.png" />
+      </picker>
+      <view wx:if="{{freq1!== 0}} ">
+      </view>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 103rpx; ">红斑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider4">
+        <slider bindchange="changeSlider4" value="{{slider4}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 10rpx; height: 78rpx;">
+       {{slider4[sli4]}}
+      </view>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 108rpx;top: 16rpx;">浸润</view>
+      <view >
+        <view class="slider"bindchange="changeSlider5" >
+        <slider bindchange="changeSlider5" value="{{slider5}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 26rpx; height: 164rpx;">
+       {{slider5[sli5]}}
+      </view>
+    </view>
+    <view class="form-cell inline" style="height: 234rpx">
+      <view class="left-text" style="width: 110rpx;">鳞屑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider6" >
+        <slider bindchange="changeSlider6" value="{{slider6}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 20rpx; height: 194rpx;">
+       {{slider6[sli6]}}
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell inline">
+      <view>躯干皮损所占面积</view>
+      <picker class="option" bindchange="onChooseFreq2" range="{{freqOptions2}}">
+        {{freqOptions2[freq2]}}
+      </picker>
+      <picker class="selector" bindchange="onChooseFreq2" range="{{freqOptions2}}">
+        <image class="selector" src="../../images/add/next.png" />
+      </picker>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 103rpx; ">红斑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider7">
+        <slider bindchange="changeSlider7" value="{{slider7}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 10rpx; height: 78rpx;">
+       {{slider7[sli7]}}
+      </view>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 108rpx;top: 16rpx;">浸润</view>
+      <view >
+        <view class="slider"bindchange="changeSlider8" >
+        <slider bindchange="changeSlider8" value="{{slider8}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 26rpx; height: 164rpx;">
+       {{slider8[sli8]}}
+      </view>
+    </view>
+    <view class="form-cell inline" style="height: 234rpx">
+      <view class="left-text" style="width: 110rpx;">鳞屑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider9" >
+        <slider bindchange="changeSlider9" value="{{slider9}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 20rpx; height: 194rpx;">
+       {{slider9[sli9]}}
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell inline">
+      <view>下肢皮损所占面积</view>
+      <picker class="option" bindchange="onChooseFreq3" range="{{freqOptions3}}">
+        {{freqOptions3[freq3]}}
+      </picker>
+      <picker class="selector" bindchange="onChooseFreq3" range="{{freqOptions3}}">
+        <image class="selector" src="../../images/add/next.png" />
+      </picker>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 103rpx; ">红斑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider10">
+        <slider bindchange="changeSlider10" value="{{slider10}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 10rpx; height: 78rpx;">
+       {{slider10[sli10]}}
+      </view>
+    </view>
+    <view class="form-cell inline" >
+      <view class="left-text" style="width: 108rpx;top: 16rpx;">浸润</view>
+      <view >
+        <view class="slider"bindchange="changeSlider11" >
+        <slider bindchange="changeSlider11" value="{{slider11}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 26rpx; height: 164rpx;">
+       {{slider11[sli11]}}
+      </view>
+    </view>
+    <view class="form-cell inline" style="height: 234rpx">
+      <view class="left-text" style="width: 110rpx;">鳞屑</view>
+      <view >
+        <view class="slider" bindchange="changeSlider12" >
+        <slider bindchange="changeSlider12" value="{{slider12}}" min="0" max="4" />
+        </view>
+      </view>
+      <view class="right-text" style="top: 20rpx; height: 194rpx;">
+       {{slider12[sli12]}}
+      </view>
+    </view>
+  </view>
+
+  <view class="form-group">
+    <view class="form-cell inline" style="height: 128rpx; display: flex; box-sizing: border-box">
+      <image style="width: 80rpx; height: 80rpx"  src="../../images/icon/paizhao.png" />
+  
+      <view class="upload-text">
+        <button class="uploadImg" bindtap="chooseImg">拍照或上传照片</button>
+       <!--{{(files.length === 0 ? "拍照或上传照片" : util.filterStr(fileName, 15))}}-->
+      </view>
+      <image class="upload" bindtap="addFile" src="../../images/add/next.png"></image>
+    </view>
+    
+  </view>
+  
+  <view class="bright789_view_hide{{showView?'bright789_view_show':''}}">
+      <view class="form-group">
+        <view class="form-cell" style="width: 670rpx; height: 494rpx; box-sizing: border-box">
+          <view class="myImage" >
+            <image src="{{imageUrl}}" style="width: 588rpx; height: 368rpx; display: inline-block; box-sizing: border-box"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="edit" bindtap="onChangeShowState">
+      <view class="hide">
+        <image class="add-image" style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box" src="../../images/icon/tupian.png" />
+      </view>
+      <view class="hidetext">{{showView?'隐藏照片':'显示照片'}}</view>
+    
+
+    </view>
+  <view class="standView"></view>
+
+  <view class="footer">
+    <view class="reset" bindtap="resetTodo">取消</view>
+    <view class="save" bindtap="saveTodo">保存</view>
+  </view>
+
+
+</view>

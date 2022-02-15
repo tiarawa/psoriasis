@@ -1,0 +1,47 @@
+<wxs module="util" src="../util.wxs"/>
+
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="title1">
+        <image class="add-image"  src="../../images/icon/dingdan.png" />
+        <view class="title2">PASI评分</view>
+      </view>
+      <view class="text1">PASI评分 (Psoriasis Area ond Sevetity Index）是综合银屑病患者的皮损严重程度（包括红斑、浸润、鳞屑）及皮损面积对其进行评分。通过特定公式计算出最终分数，常常用来对寻常型银屑病的严重程度进行评估。是国际上通用于银屑病皮损程度的评分标准。</view>
+      <view class="text2">皮损面积评分：全身分为头颈部、上肢、躯干和下肢4个部位。上述部位占体表面积的百分比分别为10%、20%、30%和40%。4个部位分别进行皮损面积评分，标准如下：</view>
+        <view class="text3">0＝无皮疹、1＝1%－9%、2＝10%－29%、3＝30%－49%、4＝50%－69%、5＝70%－89%、6＝90%－100%。</view>
+      <view>为了有助于对受累面积进行评估，应注意下述规定：</view>
+        <view>a.将颈部视为头部的一部分</view>
+        <view>b.将腋窝与腹股沟作为躯干的一部分</view>
+        <view class="text4">c.将臀部作为下肢的一部分</view>
+        <view class="text4">2、评价临床严重程度：红斑、浸润、鳞屑，分别用0-4分评价，计算方法如下：</view>
+        <view wx:for="{{images}}" style="margin-top: 10rpx;">
+          <image class="img1" src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+        </view>
+        <view class="text5">皮损严重程度评分：按照以上4部位评分，每个部位均按以下3个皮损临床特征评分：</view>
+          <view>红斑 (erythema，E)：红色或暗红色炎症性斑，压之退色。</view>
+          <view class="text6">浸润 (infiltration，I)：皮损向四周扩散蔓延的趋势，边界模糊不清，压之有实质感。</view>
+          <view class="text5">表皮脱屑/鳞屑 (desquamation，D)：指脱落的表皮细胞成片剥落。</view>
+        <view>红斑 E：</view>
+          <view>0－无红斑可见；</view>
+          <view>1－呈淡红色；</view>
+          <view>2－红色；</view>
+          <view>3－深红色；</view>
+          <view class="text4">4－红色极深。</view>
+        <view>斑块肥厚程度 I：</view>
+          <view>0－皮损与正常皮肤平齐；</view>
+          <view>1－皮损轻微高出于正常皮肤表面 ；</view>
+          <view>2－中等度隆起，斑块的边缘为圆或斜坡型 ；</view>
+          <view>3－皮损肥厚，隆起明显；</view>
+          <view class="text4">4－皮损高度增厚，隆起极为明显。</view>
+        <view>鳞屑 D：</view>
+          <view>0－表面无可见鳞屑；</view>
+          <view>1－部分皮损表面上覆有鳞屑，以细微的鳞屑为主；</view>
+          <view>2－大多数皮损表面完全或不完全覆有鳞屑，鳞屑呈片状；</view>
+          <view>3－几乎全部皮损表面覆有鳞屑，鳞屑较厚成层；</view>
+          <view class="text5">4－全部皮损表面均覆有鳞屑，鳞屑很厚成层。</view>
+        <view>*渗出、干燥及瘙痒不计入总分。</view>
+    </view>
+  </view>
+</view>
+

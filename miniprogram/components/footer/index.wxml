@@ -1,0 +1,5 @@
+<view class="footer">
+    <view class="add" bindtap="onClick" style="position: fixed; left: 590rpx; top: 1144rpx">
+      <image class="add-image" src="../../images/icon/shangchuan.png"/>
+    </view>
+</view>

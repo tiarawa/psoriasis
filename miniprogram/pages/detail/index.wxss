@@ -1,0 +1,74 @@
+.form-cell_title {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: medium;
+}
+.form-cell_uptitle{
+  width: 610rpx; height: 50rpx; display: block; box-sizing: border-box
+}
+.form-cell_updesc {
+  font-size: small;
+  color: rgb(143, 139, 139);
+  width: 436rpx; height: 50rpx; display: block; box-sizing: border-box
+}
+.form-cell_desc {
+  font-size: small;
+  color: rgb(143, 139, 139);
+}
+.form-cell_report {
+  margin-top: 15rpx;
+  font-size: medium;
+  color: rgb(59, 59, 59);
+}
+.updesc_img{
+  position: relative; width: 188rpx; height: 18rpx; display: block; box-sizing: border-box; left: 466rpx; top: -150rpx
+}
+.add-image{
+  width: 128rpx; height: 128rpx; display: inline-block; box-sizing: border-box
+}
+.footer {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: rgb(143, 139, 139);
+}
+
+.footer view {
+  width: 50%;
+  height: 100%;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.list {
+  background: white;
+}
+
+.edit {
+  color: white;
+  background-color: rgb(250, 119, 11);
+}
+.standView{
+  width: 100%;
+  height: 160rpx;
+}
+.bright789-text{
+  font-size: 40rpx;
+  line-height: 40px;
+  width: 100%;
+ }
+ .bright789_view_hide{
+  display: none;
+  
+ }
+ .bright789_view_show{
+  display: block;
+  }
+.form-cell_rep{
+  position: relative; width: 612rpx; height: 138rpx; display: block; box-sizing: border-box; left: 0rpx; top: 1rpx
+}
+.rep_text{
+  position: relative; width: 334rpx; height: 50rpx; left: 196rpx; top: -104rpx; display: block; box-sizing: border-box
+}

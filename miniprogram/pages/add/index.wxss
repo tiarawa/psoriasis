@@ -1,0 +1,119 @@
+.form-cell{
+  height: 194rpx; display: block; box-sizing: border-box
+}
+.form-cell_title {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+.form-cell_title-placeholder {
+  font-size: small;
+  color: rgb(170, 169, 169);
+}
+.form-cell_title desc{
+  width: 438rpx; height: 44rpx
+}
+.form-cell_input desc{
+  width: 438rpx; height: 44rpx; display: block
+}
+.sexleft{
+  position: relative; width: 300rpx;height: 114rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx
+}
+.age{
+  position: relative; width: 300rpx; height: 114rpx; display: block; box-sizing: border-box; left: 312rpx; top: -114rpx
+}
+.select{
+  font-size: small;
+}
+.add-image{
+  width: 128rpx; height: 128rpx; display: inline-block; box-sizing: border-box
+}
+.img_desc{
+  position: relative; width: 128rpx; height: 128rpx; display: block; box-sizing: border-box; left: 483rpx; top: -118rpx
+}
+.upload {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+.option {
+  margin-left: 15vw;
+}
+.left-text{
+  position: relative; height: 78rpx;  display: block; box-sizing: border-box; left: 0rpx; top: 12rpx;
+}
+.slider{
+  overflow: hidden; position: relative; width: 276rpx;  height: 78rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx
+}
+.right-text{
+  position: relative; left: 0rpx;  display: block; box-sizing: border-box; width: 260rpx;
+}
+.selector {
+  width: 15px;
+  height: 15px;
+  margin-left: auto;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  border-top: lightgray solid 1px;
+}
+
+.footer view {
+  width: 50%;
+  height: 100%;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.reset {
+  background: white;
+}
+
+.standView{
+  width: 100%;
+  height: 160rpx;
+}
+.upload-text {
+  margin-left: auto;
+}
+.myImage{
+  margin: 30rpx auto;
+  text-align: center;
+}
+.uploadImg{
+  color: black; width: 332rpx; height: 76rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx;
+  font-size: medium;
+}
+.bright789-text{
+  font-size: 40rpx;
+  line-height: 40px;
+  width: 100%;
+ }
+ .bright789_view_hide{
+  display: none;
+  
+ }
+ .bright789_view_show{
+  display: block;
+ }
+ .footer{
+  font-size: large;
+ }
+ .save{
+   color: white;
+   background-color: rgb(250, 119, 11);
+ }
+ .edit{
+  width: 670rpx; height: 90rpx; display: block; box-sizing: border-box
+ }
+ .hide{
+  position: relative; width: 142rpx; height: 60rpx; left: 435rpx; top: 16rpx; display: block; box-sizing: border-box
+ }
+ .hidetext{
+ position: relative; width: 142rpx; height: 48rpx; left: 506rpx; top: -38rpx; display: block; box-sizing: border-box
+ }

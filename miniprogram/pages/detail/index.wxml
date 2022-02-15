@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="form-cell_title" style="margin-top: 1rpx;">{{todo.name}} - {{todo.date}} 病情记录</view>
+        <view class="form-cell_updesc">性别：{{todo.sex}}</view>
+        <view class="form-cell_updesc">年龄：{{todo.age}}</view>
+        <view class="form-cell_updesc">病情描述：{{todo.desc}}</view>
+      <view class="updesc_img">
+        <image class="add-image" src="../../images/icon/lishi.png" />
+      </view>
+      <view class="form-cell_uptitle">头部：{{freqOptions[todo.freq]}}</view>
+        <view class="form-cell_desc">红斑：{{slider1[todo.sli1]}}</view>
+        <view class="form-cell_desc">浸润：{{slider2[todo.sli2]}}</view>
+        <view class="form-cell_desc">鳞屑：{{slider3[todo.sli3]}}</view>
+      <view class="form-cell_title">上肢：{{freqOptions[todo.freq1]}}</view>
+        <view class="form-cell_desc">红斑：{{slider1[todo.sli4]}}</view>
+        <view class="form-cell_desc">浸润：{{slider2[todo.sli5]}}</view>
+        <view class="form-cell_desc">鳞屑：{{slider3[todo.sli6]}}</view>
+      <view class="form-cell_title">躯干：{{freqOptions[todo.freq2]}}</view>
+        <view class="form-cell_desc">红斑：{{slider1[todo.sli7]}}</view>
+        <view class="form-cell_desc">浸润：{{slider2[todo.sli8]}}</view>
+        <view class="form-cell_desc">鳞屑：{{slider3[todo.sli9]}}</view>
+      <view class="form-cell_title">下肢：{{freqOptions[todo.freq3]}}</view>
+        <view class="form-cell_desc">红斑：{{slider1[todo.sli10]}}</view>
+        <view class="form-cell_desc">浸润：{{slider2[todo.sli11]}}</view>
+        <view class="form-cell_desc">鳞屑：{{slider3[todo.sli12]}}</view>
+    </view>
+  </view>
+  
+    <view class="bright789_view_hide{{showView?'bright789_view_show':''}}">
+      <view class="form-group">
+        <view class="form-cell" style="width: 672rpx; height: 604rpx; display: block; box-sizing: border-box">
+          <view class="form-cell_rep">
+            <image class="add-image" src="../../images/icon/dingdan.png" />
+            <view class="rep_text">
+              <view class="form-cell_title" style="font-size: large; margin-top: 1rpx; text-align: center; width: 239rpx; height: 50rpx; display: block; box-sizing: border-box">量化评估报告</view>
+          </view>
+          </view>
+
+            <view class="form-cell_report">头部PASI评分：{{headE}}</view>
+            <view class="form-cell_report">上肢PASI评分：{{todo.desc}}</view>
+            <view class="form-cell_report">躯干PASI评分：{{todo.date}}</view>
+            <view class="form-cell_report">下肢PASI评分：{{todo.desc}}</view>
+            <view class="form-cell_report">您此次记录的PASI评分为：{{todo.date}}</view>
+        </view>
+      </view>
+    </view>
+  <view class="standView"></view>
+  <view class="footer">
+    <view class="list" bindtap="toPASI">查看PASI评分细则</view>
+   <view  class="edit" bindtap="onChangeShowState">{{showView?'隐藏量化评估报告':'显示量化评估报告'}}</view>
+
+   
+  </view>
+</view>
