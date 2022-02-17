@@ -36,10 +36,10 @@
   <view class="form-group">
     <view class="form-cell inline">
       <view>头部皮损所占面积</view>
-      <picker class="option" bindchange="onChooseFreq" range="{{freqOptions}}">
-        {{freqOptions[freq]}}
+      <picker class="option" bindchange="onChooseFreq0" range="{{freqOptions}}">
+        {{freqOptions[freq0]}}
       </picker>
-      <picker class="selector" bindchange="onChooseFreq" range="{{freqOptions}}">
+      <picker class="selector" bindchange="onChooseFreq0" range="{{freqOptions}}">
         <image class="selector" src="../../images/add/next.png" />
       </picker>
     </view>
