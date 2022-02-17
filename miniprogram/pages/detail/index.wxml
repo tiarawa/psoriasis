@@ -8,7 +8,7 @@
       <view class="updesc_img">
         <image class="add-image" src="../../images/icon/lishi.png" />
       </view>
-      <view class="form-cell_uptitle">头部：{{freqOptions[todo.freq]}}</view>
+      <view class="form-cell_uptitle">头部：{{freqOptions[todo.freq0]}}</view>
         <view class="form-cell_desc">红斑：{{slider1[todo.sli1]}}</view>
         <view class="form-cell_desc">浸润：{{slider2[todo.sli2]}}</view>
         <view class="form-cell_desc">鳞屑：{{slider3[todo.sli3]}}</view>
@@ -37,11 +37,11 @@
           </view>
           </view>
 
-            <view class="form-cell_report">头部PASI评分：{{headE}}</view>
-            <view class="form-cell_report">上肢PASI评分：{{todo.desc}}</view>
-            <view class="form-cell_report">躯干PASI评分：{{todo.date}}</view>
-            <view class="form-cell_report">下肢PASI评分：{{todo.desc}}</view>
-            <view class="form-cell_report">您此次记录的PASI评分为：{{todo.date}}</view>
+            <view class="form-cell_report">头部PASI评分：{{head}}</view>
+            <view class="form-cell_report">上肢PASI评分：{{arm}}</view>
+            <view class="form-cell_report">躯干PASI评分：{{body}}</view>
+            <view class="form-cell_report">下肢PASI评分：{{leg}}</view>
+            <view class="form-cell_report">您此次记录的PASI评分为：{{head + arm + body + leg}}</view>
         </view>
       </view>
     </view>
