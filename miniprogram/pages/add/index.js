@@ -8,8 +8,9 @@ Page({
     desc: '',
     sex:'',
     date:'',
-    freqOptions: ['0 无皮疹', '1 1%－9%','2 10%－29%', '3 30%－49%','4 50%－69%', '5 70%－89%','6 90%－100%'],
     freq: 0,
+    freqOptions: ['0 无皮疹', '1 1%－9%','2 10%－29%', '3 30%－49%','4 50%－69%', '5 70%－89%','6 90%－100%'],
+    freq0: 0,
     freqOptions1: ['0 无皮疹', '1 1%－9%','2 10%－29%', '3 30%－49%','4 50%－69%', '5 70%－89%','6 90%－100%'],
     freq1: 0,
     freqOptions2: ['0 无皮疹', '1 1%－9%','2 10%－29%', '3 30%－49%','4 50%－69%', '5 70%－89%','6 90%－100%'],
@@ -130,6 +131,11 @@ Page({
   onChooseFreq(e) {
     this.setData({
       freq: e.detail.value
+    })
+  },
+  onChooseFreq0(e) {
+    this.setData({
+      freq0: e.detail.value
     })
   },
   onChooseFreq1(e) {
@@ -280,6 +286,7 @@ Page({
         desc: this.data.desc,         // 待办描述
         star:false,
         freq: Number(this.data.freq), // 待办完成情况（提醒频率）
+        freq0: Number(this.data.freq0), 
         freq1: Number(this.data.freq1),
         freq2: Number(this.data.freq2),
         freq3: Number(this.data.freq3),
