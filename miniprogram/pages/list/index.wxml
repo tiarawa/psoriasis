@@ -15,7 +15,7 @@
       <mp-badge content="{{pending.length}}" style="margin-left: 10rpx;" />
       </view>
   </view>
-  <view class="form-group">
+  <view class="form-group" wx:if="{{pending.length > 0}}">
     <view class="form-cell" wx:for="{{pending}}" wx:key="index">
       <mp-slideview buttons="{{slideButtons}}" data-index='{{index}}' bindbuttontap="slideButtonTap">
         <view class="slide" data-index="{{index}}" bindtap="toDetailPage">
@@ -30,7 +30,6 @@
       </mp-slideview>
     </view>
   </view>
-
-
+  
   <footer></footer>
 </view>
