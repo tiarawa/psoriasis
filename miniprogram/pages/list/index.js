@@ -5,10 +5,9 @@ Page({
   data: {
     todos: [], // 用户的所有待办事项
     pending: [], // 未完成待办事项
-    finished: [] // 已完成待办事项
   },
 
-  onShow() {
+   onShow() {
     // 通过云函数调用获取用户 _openId
     getApp().getOpenId().then(async openid => {
       // 根据 _openId 数据，查询并展示待办列表
@@ -25,7 +24,6 @@ Page({
           todos: data,
           // 通过 filter 函数，将待办事项分为未完成和已完成两部分
           pending: data.filter(todo => todo.freq === 0),
-          finished: data.filter(todo => todo.freq === 1)
         })
       })
     })
@@ -85,53 +83,9 @@ Page({
         this.setData({
           todos: [],
           pending: [],
-          finished: []
         })
       }
     }
-  },
-
-  // 点击左侧单选框时，切换待办状态
-  async finishTodo(e) {
-    // 根据序号获得触发切换事件的待办
-    const todoIndex = e.currentTarget.dataset.index
-    const todo = this.data.pending[todoIndex]
-    const db = await getApp().database()
-    // 根据待办 _id，获得并更新待办事项状态
-    db.collection(getApp().globalData.collection).where({
-      _id: todo._id
-    }).update({
-      // freq == 1 表示待办已完成，不再提醒
-      // freq == 0 表示待办未完成，每天提醒
-      data: {
-        freq: 1
-      }
-    })
-    // 快速刷新数据
-    todo.freq = 1
-    this.setData({
-      pending: this.data.todos.filter(todo => todo.freq === 0),
-      finished: this.data.todos.filter(todo => todo.freq === 1)
-    })
-  },
-
-  // 同上一函数，将待办状态设置为未完成
-  async resetTodo(e) {
-    const todoIndex = e.currentTarget.dataset.index
-    const todo = this.data.finished[todoIndex]
-    const db = await getApp().database()
-    db.collection(getApp().globalData.collection).where({
-      _id: todo._id
-    }).update({
-      data: {
-        freq: 0
-      }
-    })
-    todo.freq = 0
-    this.setData({
-      pending: this.data.todos.filter(todo => todo.freq === 0),
-      finished: this.data.todos.filter(todo => todo.freq === 1)
-    })
   },
 
   // 跳转响应函数
